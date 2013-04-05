@@ -85,6 +85,7 @@ function showHelp(type) {
     console.log("  demo         Runs demo build of Ace");
     console.log("  full         all of above");
     console.log("  highlighter  ");
+    console.log("  lively      Runs Lively Kernel build of Ace");
     console.log("args:");
     console.log("  --target ./path   path to build folder");
     console.log("flags:");
