@@ -58,6 +58,8 @@ var HashHandler = require("ace/keyboard/hash_handler").HashHandler;
 
 var Renderer = require("ace/virtual_renderer").VirtualRenderer;
 var Editor = require("ace/editor").Editor;
+var singleLineEdit = require("ace/single_line_edit").singleLineEdit;
+var MultiSelect = require("ace/multi_select").MultiSelect;
 
 var whitespace = require("ace/ext/whitespace");
 
@@ -104,7 +106,7 @@ container.parentNode.appendChild(consoleEl);
 consoleEl.style.cssText = "position:fixed; bottom:1px; right:0;\
 border:1px solid #baf; z-index:100";
 
-var cmdLine = new layout.singleLineEditor(consoleEl);
+var cmdLine = singleLineEdit(consoleEl);
 cmdLine.editor = env.editor;
 env.editor.cmdLine = cmdLine;
 
