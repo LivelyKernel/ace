@@ -72,7 +72,10 @@ function main(args) {
             demo();
         } else if (type == "highlighter") {
             // TODO
+        } else if (type == "lively") {
+            lively();
         }
+
     }
 }
 
@@ -109,6 +112,12 @@ function ace() {
     for (var i = 0; i < 4; i++)
         buildAce({compress: i & 2, noconflict: i & 1});
 }
+
+function lively() {
+    console.log('# lively ---------');
+    buildAce({compress: false, noconflict: true});
+}
+
 
 function demo() {
     console.log('# kitchen sink ---------');
